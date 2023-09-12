@@ -46,11 +46,7 @@ namespace polekwadratu
                 return;
             }
             var a = Convert.ToInt32(dlugoscBoku.Text);
-<<<<<<< HEAD
             long pole  = a * a; 
-=======
-            long pole  = a * a;
->>>>>>> 34de3f318404fbc84b89b323281044f290f5d7ae
             long obwod = 4 * a;
             if (wynikLabel.Visibility == Visibility.Hidden)
             {
