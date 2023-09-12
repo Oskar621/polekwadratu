@@ -1,0 +1,31 @@
+﻿<Window x:Class="polekwadratu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:polekwadratu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <StackPanel>
+        <Label Content="Obliczanie Pola kwadratu" HorizontalAlignment="Center" />
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Podaj długość boku kwadratu w cm: " HorizontalAlignment="Center"/>
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Width="40px" Name="dlugoscBoku" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Oblicz pole kwadratu" Width="200px" HorizontalAlignment="Left" Click="Button_Click"/>
+            <Button Content="Clear" Width="100px" HorizontalAlignment="Left" Click="Button_Click_1"/>
+        </StackPanel>
+        <Label Content="Twój wynik to: " Visibility="Hidden" Name="wynikLabel"/>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Pole: " Visibility="Hidden" Name="poleWynikLabel"/>
+            <Label Content="" Visibility="Hidden" Name="poleWynik"/>
+         </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Obwód: " Visibility="Hidden" Name="obwodWynikLabel"/>
+            <Label Content="" Visibility="Hidden" Name="obwodWynik"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
