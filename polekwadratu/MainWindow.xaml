@@ -9,7 +9,7 @@
 
     <StackPanel Orientation="Vertical">
         <StackPanel>
-            <Label Content="Obliczanie Pola kwadratu" HorizontalAlignment="Center" />
+            <Label Content="Obliczanie Pola kwadratu: " HorizontalAlignment="Center" />
             <StackPanel Orientation="Horizontal">
                 <Label Content="Podaj długość boku kwadratu w cm: " HorizontalAlignment="Center"/>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Width="40px" Name="dlugoscBoku" />
