@@ -7,25 +7,43 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    <StackPanel>
-        <Label Content="Obliczanie Pola kwadratu" HorizontalAlignment="Center" />
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Podaj długość boku kwadratu w cm: " HorizontalAlignment="Center"/>
-            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Width="40px" Name="dlugoscBoku" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Button Content="Oblicz pole kwadratu" Width="200px" HorizontalAlignment="Left" Click="Button_Click"/>
-            <Button Content="Clear" Width="100px" HorizontalAlignment="Left" Click="Button_Click_1"/>
-        </StackPanel>
-        <Label Content="Twój wynik to: " Visibility="Hidden" Name="wynikLabel"/>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Pole: " Visibility="Hidden" Name="poleWynikLabel"/>
-            <Label Content="" Visibility="Hidden" Name="poleWynik"/>
-         </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Obwód: " Visibility="Hidden" Name="obwodWynikLabel"/>
-            <Label Content="" Visibility="Hidden" Name="obwodWynik"/>
-        </StackPanel>
+    <StackPanel Orientation="Vertical">
+        <StackPanel>
+            <Label Content="Obliczanie Pola kwadratu" HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Podaj długość boku kwadratu w cm: " HorizontalAlignment="Center"/>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Width="40px" Name="dlugoscBoku" />
+            </StackPanel>
+            <StackPanel>
+                <CheckBox x:Name="przezroczystosc" Content="Polprzezroczysty" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Wybierz kolor:"/>
+                <ComboBox x:Name="kolory" SelectedIndex="0" Width="100" Height="20">
+                    <ComboBoxItem Content="Black"/>
+                    <ComboBoxItem Content="Red"/>
+                    <ComboBoxItem Content="Yellow"/>
+                    <ComboBoxItem Content="Green"/>
+                    <ComboBoxItem Content="Blue"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel>
+                <Button Content="Rysuj" Width="100px" HorizontalAlignment="Left" Click="Button_Click"/>
+                <Button Content="Clear" Width="100px" HorizontalAlignment="Left" Click="Button_Click_1"/>
+            </StackPanel>
+            <Label Content="Twój wynik to: " Visibility="Hidden" Name="wynikLabel"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Pole: " Visibility="Hidden" Name="poleWynikLabel"/>
+                <Label Content="" Visibility="Hidden" Name="poleWynik"/>
+             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Obwód: " Visibility="Hidden" Name="obwodWynikLabel"/>
+                <Label Content="" Visibility="Hidden" Name="obwodWynik"/>
+            </StackPanel>
 
+        </StackPanel>
+        <StackPanel>
+            <Rectangle x:Name="rysunek" Height="0" Stroke="Black" Width="0"/>
+        </StackPanel>
     </StackPanel>
 </Window>

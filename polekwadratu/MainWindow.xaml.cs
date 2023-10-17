@@ -58,7 +58,28 @@ namespace polekwadratu
             }
             poleWynik.Content = pole.ToString() + "cm^2";
             obwodWynik.Content = obwod.ToString() + "cm";
-            
+
+
+            //Rysowanie
+
+            double bok;
+            if(double.TryParse(dlugoscBoku.Text, out bok) && bok <= 195)
+            {
+                rysunek.Height = bok;
+                rysunek.Width = bok;
+                SolidColorBrush color = (SolidColorBrush)new BrushConverter().ConvertFromString(kolory.Text);
+                rysunek.Stroke = color;
+                rysunek.Fill = color;
+                rysunek.Opacity = (przezroczystosc.IsChecked.Value) ? 0.5 : 1;
+            }
+            else
+            {
+                MessageBox.Show("Brak Danych lub za duzy blok");
+            }
+
+
+
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
